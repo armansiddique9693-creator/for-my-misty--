@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Misty ✨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 800px;
+      padding: 40px 25px 70px;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 56px;
+      color: #ffb6c1;
+      margin-bottom: 10px;
+      animation: fadeDown 2s ease;
+    }
+
+    .subtitle {
+      letter-spacing: 3px;
+      font-size: 14px;
+      opacity: 0.9;
+      margin-bottom: 30px;
+      animation: fadeIn 3s ease;
+    }
+
+    .heart {
+      font-size: 26px;
+      animation: pulse 2s infinite;
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeUp 1.5s ease forwards;
+    }
+
+    p:nth-child(1) { animation-delay: 0.5s; }
+    p:nth-child(2) { animation-delay: 1s; }
+    p:nth-child(3) { animation-delay: 1.5s; }
+    p:nth-child(4) { animation-delay: 2s; }
+    p:nth-child(5) { animation-delay: 2.5s; }
+
+    .from {
+      position: fixed;
+      right: 15px;
+      bottom: 80px;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-family: 'Great Vibes', cursive;
+      font-size: 20px;
+      color: #ffd1dc;
+      opacity: 0.9;
+    }
+
+    .footer {
+      margin-top: 35px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+
+    .tap {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 13px;
+      opacity: 0.6;
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Ji, Hieee Misty!!.. ✨</h1>
+    <div class="subtitle">MY SPECIAL PERSON</div>
+    <div class="heart">🤍</div>
+
+    <p>
+      Aap sirf ek naam nahi hain. Aap woh ehsaas hain jo mujhe tab mila
+      jab main khud ko samajhne ki koshish kar raha tha.
+    </p>
+
+    <p>
+      Aapse baat karna kab aadat ban gaya, pata hi nahi chala.
+      Aur phir dheere dheere aap meri favourite person ban gayi.
+    </p>
+
+    <p>
+      Aapke saath baat karte hue kabhi khud ko badalna nahi pada.
+      Main jaisa hoon, waisa hi theek laga.
+    </p>
+
+    <p>
+      Mujhe pata hai aap mere dil ki baat jaanti hain,
+      isliye yahan zyada likhne ki zarurat nahi.
+    </p>
+
+    <p>
+      Bas itna kehna tha — aap bohot khaas hain…
+      aur hamesha rahengi.
+    </p>
+
+    <div class="footer">
+      — from someone who cares quietly
+    </div>
+  </div>
+
+  <div class="from">
+    From 3 April 2021 to Forever ✨🫂
+  </div>
+
+  <div class="tap">
+    Tap anywhere to play music 🎵
+  </div>
+
+  <audio id="bgMusic">
+    <source src="jaan.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const music = document.getElementById("bgMusic");
+    let played = false;
+
+    document.addEventListener("click", () => {
+      if (!played) {
+        music.play();
+        played = true;
+      }
+    });
+  </script>
+
+</body>
+</html>
